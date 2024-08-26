@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="a30110dc-f1fa-43c8-acb7-40a497e6a26b" name="Changes" comment="" />
+    <list default="true" id="a30110dc-f1fa-43c8-acb7-40a497e6a26b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact_form_data/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact_form_data/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact_form_data/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact_form_data/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact_form_data/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact_form_data/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact_form_data/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact_form_data/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact_form_data/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio_Backend/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio_Backend/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio_Backend/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio_Backend/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,10 +38,15 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Django Server.Portfolio_Backend.executor": "Debug",
     "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
@@ -36,6 +59,7 @@
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="Portfolio_Backend.settings" />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -69,7 +93,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1724679289452</updated>
-      <workItem from="1724679323332" duration="266000" />
+      <workItem from="1724679323332" duration="12048000" />
     </task>
     <servers />
   </component>
