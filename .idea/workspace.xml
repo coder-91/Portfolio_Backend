@@ -4,18 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a30110dc-f1fa-43c8-acb7-40a497e6a26b" name="Changes" comment="workspace.xml">
-      <change afterPath="$PROJECT_DIR$/contact_form_data/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact_form_data/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact_form_data/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact_form_data/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact_form_data/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact_form_data/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact_form_data/views.py" afterDir="false" />
+    <list default="true" id="a30110dc-f1fa-43c8-acb7-40a497e6a26b" name="Changes" comment="Implement email sending functionality for contact form">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio_Backend/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio_Backend/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio_Backend/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio_Backend/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,29 +16,29 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2lCLoiX2FiRspXEsmBv6Ne2oQY2" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Django Server.Portfolio_Backend.executor": "Debug",
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Django Server.Portfolio_Backend.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Admin\Documents\coding\Portfolio\Portfolio_Backend\Portfolio_Backend" />
@@ -95,7 +86,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1724679289452</updated>
-      <workItem from="1724679323332" duration="12742000" />
+      <workItem from="1724679323332" duration="13362000" />
+      <workItem from="1724753839714" duration="4026000" />
+      <workItem from="1725060200315" duration="1284000" />
+      <workItem from="1725125383111" duration="1176000" />
     </task>
     <task id="LOCAL-00001" summary="Added gitignore file">
       <option name="closed" value="true" />
@@ -113,7 +107,23 @@
       <option name="project" value="LOCAL" />
       <updated>1724707331900</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="workspace.xml">
+      <option name="closed" value="true" />
+      <created>1724707915254</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1724707915254</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Implement email sending functionality for contact form">
+      <option name="closed" value="true" />
+      <created>1724708033149</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1724708033149</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,6 +132,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added gitignore file" />
     <MESSAGE value="workspace.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="workspace.xml" />
+    <MESSAGE value="Implement email sending functionality for contact form" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement email sending functionality for contact form" />
   </component>
 </project>
