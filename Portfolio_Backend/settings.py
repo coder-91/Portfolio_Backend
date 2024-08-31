@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'contact_form_data',
+    'contact_form',
     'corsheaders',
     'rest_framework',
 ]

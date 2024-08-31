@@ -4,13 +4,13 @@ from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from contact_form_data.serializers import ContactFormDataSerializer
+from contact_form.serializers import ContactFormSerializer
 
 
 # Create your views here.
-class ContactFormDataAPIView(APIView):
+class ContactFormAPIView(APIView):
     def post(self, request):
-        serializer = ContactFormDataSerializer(data=request.data)
+        serializer = ContactFormSerializer(data=request.data)
         if serializer.is_valid():
             name = serializer.validated_data['name']
             email = serializer.validated_data['email']
