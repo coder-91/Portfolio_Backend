@@ -87,3 +87,5 @@ local_settings.py
 
 Portfolio_Backend/.env
 db.sqlite3
+
+.idea
