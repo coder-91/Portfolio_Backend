@@ -14,13 +14,19 @@ def get_secret(secret_id):
     environment = os.getenv('ENVIRONMENT', 'local')
 
     if environment == 'local':
-        return os.getenv(secret_id)
+        value = os.getenv(secret_id)
+        if value is None:
+            raise ValueError(f"Environment variable '{secret_id}' not found.")
+        return value
     else:
         client = secretmanager.SecretManagerServiceClient()
         project_id = get_secret('PROJECT_ID')
         secret_path = f"projects/{project_id}/secrets/{secret_id}/versions/latest"
-        secret = client.access_secret_version(name=secret_path)
-        return secret.payload.data.decode("UTF-8")
+        try:
+            secret = client.access_secret_version(name=secret_path)
+            return secret.payload.data.decode("UTF-8")
+        except Exception as e:
+            raise ValueError(f"Error accessing secret '{secret_id}': {str(e)}")
 
 
 # Load the environment variables from the .env file
