@@ -12,18 +12,23 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 def get_secret(secret_id):
     environment = os.getenv('ENVIRONMENT', 'local')
+    print(f"Current environment: {environment}")  # Ausgabe des aktuellen Umgebung
 
     if environment == 'local':
         value = os.getenv(secret_id)
+        print(f"Trying to get local environment variable '{secret_id}': {value}")  # Wert aus der Umgebung
         if value is None:
             raise ValueError(f"Environment variable '{secret_id}' not found.")
         return value
     else:
         client = secretmanager.SecretManagerServiceClient()
         project_id = get_secret('PROJECT_ID')
+        print(f"Project ID: {project_id}")  # Ausgabe der Projekt-ID
         secret_path = f"projects/{project_id}/secrets/{secret_id}/versions/latest"
+        print(f"Secret path: {secret_path}")  # Ausgabe des Secret-Pfads
         try:
             secret = client.access_secret_version(name=secret_path)
+            print(f"Secret value for '{secret_id}': {secret.payload.data.decode('UTF-8')}")
             return secret.payload.data.decode("UTF-8")
         except Exception as e:
             raise ValueError(f"Error accessing secret '{secret_id}': {str(e)}")
@@ -35,12 +40,17 @@ if os.getenv('ENVIRONMENT', 'local') == 'local':
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = get_secret('SECRET_KEY')
+print(f"Loaded SECRET_KEY: {SECRET_KEY}")  # Ausgabe des geladenen SECRET_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = get_secret('DEBUG') == 'True'
+print(f"DEBUG mode: {DEBUG}")  # Ausgabe des DEBUG-Status
 
 ALLOWED_HOSTS = get_secret('ALLOWED_HOSTS').split(',')
+print(f"ALLOWED_HOSTS: {ALLOWED_HOSTS}")
+
 CORS_ALLOWED_ORIGINS = get_secret('CORS_ALLOWED_ORIGINS').split(',')
+print(f"CORS_ALLOWED_ORIGINS: {CORS_ALLOWED_ORIGINS}")  # Ausgabe der CORS-Hosts
 
 INSTALLED_APPS = [
     'django.contrib.admin',
