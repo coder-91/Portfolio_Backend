@@ -22,7 +22,7 @@ def get_secret(secret_id):
         return value
     else:
         client = secretmanager.SecretManagerServiceClient()
-        project_id = get_secret('PROJECT_ID')
+        project_id = 'projects-438313'
         print(f"Project ID: {project_id}")  # Ausgabe der Projekt-ID
         secret_path = f"projects/{project_id}/secrets/{secret_id}/versions/latest"
         print(f"Secret path: {secret_path}")  # Ausgabe des Secret-Pfads
