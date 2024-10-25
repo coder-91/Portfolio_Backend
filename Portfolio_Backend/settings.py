@@ -11,7 +11,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 def get_secret(secret_id):
-    environment = os.getenv('ENVIRONMENT', 'local')
+    environment = os.getenv('ENVIRONMENT')
     print(f"Current environment: {environment}")  # Ausgabe des aktuellen Umgebung
 
     if environment == 'local':
