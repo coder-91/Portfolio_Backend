@@ -33,6 +33,8 @@ def get_secret(secret_id):
 if os.getenv('ENVIRONMENT', 'local') == 'local':
     load_dotenv()
 
+ENVIRONMENT = get_secret('ENVIRONMENT')
+
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = get_secret('SECRET_KEY')
 
