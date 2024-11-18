@@ -41,9 +41,9 @@ SECRET_KEY = get_secret('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = get_secret('DEBUG') == 'True'
 
-ALLOWED_HOSTS = get_secret('ALLOWED_HOSTS').split(',')
+ALLOWED_HOSTS = [host.strip() for host in get_secret('ALLOWED_HOSTS').split(',')]
 
-CORS_ALLOWED_ORIGINS = get_secret('CORS_ALLOWED_ORIGINS').split(',')
+CORS_ALLOWED_ORIGINS = [origin.strip() for origin in get_secret('CORS_ALLOWED_ORIGINS').split(',')]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
