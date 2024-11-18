@@ -11,7 +11,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 def get_secret(secret_id):
-    environment = os.getenv('ENVIRONMENT')
+    environment = os.getenv('PORTFOLIO_ENVIRONMENT')
 
     if environment == 'local':
         value = os.getenv(secret_id)
@@ -30,20 +30,20 @@ def get_secret(secret_id):
 
 
 # Load the environment variables from the .env file
-if os.getenv('ENVIRONMENT', 'local') == 'local':
+if os.getenv('PORTFOLIO_ENVIRONMENT', 'local') == 'local':
     load_dotenv()
 
-ENVIRONMENT = get_secret('ENVIRONMENT')
+ENVIRONMENT = get_secret('PORTFOLIO_ENVIRONMENT')
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = get_secret('SECRET_KEY')
+SECRET_KEY = get_secret('PORTFOLIO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = get_secret('DEBUG') == 'True'
+DEBUG = get_secret('PORTFOLIO_DEBUG') == 'True'
 
-ALLOWED_HOSTS = [host.strip() for host in get_secret('ALLOWED_HOSTS').split(',')]
+ALLOWED_HOSTS = [host.strip() for host in get_secret('PORTFOLIO_ALLOWED_HOSTS').split(',')]
 
-CORS_ALLOWED_ORIGINS = [origin.strip() for origin in get_secret('CORS_ALLOWED_ORIGINS').split(',')]
+CORS_ALLOWED_ORIGINS = [origin.strip() for origin in get_secret('PORTFOLIO_CORS_ALLOWED_ORIGINS').split(',')]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -126,10 +126,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ORIGIN_ALLOW_ALL = False
 
 # Email settings
-EMAIL_BACKEND = get_secret('EMAIL_BACKEND')
-EMAIL_HOST = get_secret('EMAIL_HOST')
-EMAIL_PORT = get_secret('EMAIL_PORT')
-EMAIL_USE_TLS = get_secret('EMAIL_USE_TLS') == 'True'
-EMAIL_HOST_USER = get_secret('EMAIL_HOST_USER')
-NOTIFY_EMAIL = get_secret('NOTIFY_EMAIL')
-EMAIL_HOST_PASSWORD = get_secret('EMAIL_HOST_PASSWORD')
+EMAIL_BACKEND = get_secret('PORTFOLIO_EMAIL_BACKEND')
+EMAIL_HOST = get_secret('PORTFOLIO_EMAIL_HOST')
+EMAIL_PORT = get_secret('PORTFOLIO_EMAIL_PORT')
+EMAIL_USE_TLS = get_secret('PORTFOLIO_EMAIL_USE_TLS') == 'True'
+EMAIL_HOST_USER = get_secret('PORTFOLIO_EMAIL_HOST_USER')
+NOTIFY_EMAIL = get_secret('PORTFOLIO_NOTIFY_EMAIL')
+EMAIL_HOST_PASSWORD = get_secret('PORTFOLIO_EMAIL_HOST_PASSWORD')
