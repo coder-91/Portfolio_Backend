@@ -39,9 +39,7 @@ ENVIRONMENT = get_secret('PORTFOLIO_ENVIRONMENT')
 SECRET_KEY = get_secret('PORTFOLIO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = get_secret('PORTFOLIO_DEBUG') == 'True'
-
-SECURE_SSL_REDIRECT = get_secret('PORTFOLIO_SECURE_SSL_REDIRECT')
+DEBUG = get_secret('PORTFOLIO_DEBUG')
 
 ALLOWED_HOSTS = [host.strip() for host in get_secret('PORTFOLIO_ALLOWED_HOSTS').split(',')]
 
