@@ -20,7 +20,7 @@ def get_secret(secret_id):
         return value
     else:
         client = secretmanager.SecretManagerServiceClient()
-        project_id = 'projects-438313'
+        project_id = 'veysel-server-456622'
         secret_path = f"projects/{project_id}/secrets/{secret_id}/versions/latest"
         try:
             secret = client.access_secret_version(name=secret_path)
